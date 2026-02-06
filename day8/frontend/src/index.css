@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+.modaleBox{
+    background-color: rgba(71, 71, 71, 0.396);
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(10px)
+}
+
+.modaleBox.show {
+    display: block;
+}
