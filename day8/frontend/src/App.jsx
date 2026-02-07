@@ -12,7 +12,7 @@ const App = () => {
 
 
   async function getdata(){
-    let detail = await axios.get("http://localhost:3000/api/notes")
+    let detail = await axios.get("https://express-23ge.onrender.com/api/notes")
     setnotes(detail.data.notes)
   }
 
@@ -27,7 +27,7 @@ const App = () => {
     let inputdata = e.target.elements.input.value
     let discriptiondata = e.target.elements.discription.value
 
-    axios.post("http://localhost:3000/api/notes",{
+    axios.post("https://express-23ge.onrender.com/api/notes",{
       title:inputdata,
       discription:discriptiondata
     })
@@ -38,14 +38,14 @@ const App = () => {
   }
 
   function deleteHandler(id){
-    axios.delete(`http://localhost:3000/api/notes/${id}`)
+    axios.delete(`https://express-23ge.onrender.com/api/notes/${id}`)
     .then(()=>{
       getdata()
     })
   }
 
   function editDiscription(EditedValue,id){
-    axios.patch(`http://localhost:3000/api/notes/${id}`,{
+    axios.patch(`https://express-23ge.onrender.com/api/notes/${id}`,{
       discription: EditedValue
     })
     .then(()=>{
