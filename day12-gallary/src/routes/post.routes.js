@@ -22,7 +22,8 @@ postRouter.post("/create",upload.single("image_1") ,async (req,res)=>{
 
     res.status(201).json({
         Message:"post created successfully",
-        post
+        post,
+        result
     })
 })
 
