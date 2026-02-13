@@ -27,4 +27,4 @@ postRouter.post("/create",upload.single("image_1") ,async (req,res)=>{
     })
 })
 
-module.exports =  postRouter
+module.exports =  postRouter 
