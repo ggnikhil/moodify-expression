@@ -28,6 +28,16 @@ async function createPostController(req,res){
     })
 }
 
+async function fetchingPostController(req,res){
+    const posts = await postModel.find()
+    
+    res.status(200).json({
+        message:"data fetch successfully",
+        posts
+    })
+}
+
 module.exports ={
     createPostController,
+    fetchingPostController
 }

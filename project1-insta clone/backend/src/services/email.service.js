@@ -58,25 +58,6 @@ async function sendingRegisterEmail(userEmail,user){
     await sendEmail(userEmail, subject, text, html);
 }
 
-// async function sendingLoginEmail(userEmail,user){
-//     const subject = 'Welcome to Insta-clone 🚀';
-//     const text = `Hello ${user},Thank you for registering on Insta-clone
-//                  .We're excited to have you on board!
-//                   Best regards,
-//                   Insta-clone Team`;
-
-//     const html = `
-//         <p>Hello <strong>${user}</strong>,</p>
-//         <p>Thank you for registering on <b>Insta-clone</b>.</p>
-//         <p>We’re excited to have you on board!</p>
-//         <br/>
-//         <p>Best regards,<br/>Insta-clone Team</p>
-//     `;
-
-//     console.log(user)
-
-//     await sendEmail(userEmail, subject, text, html);
-// }
 
 module.exports = {
     sendingRegisterEmail,

@@ -1,0 +1,69 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body,#root{
+  height: 100%;
+  font-weight: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.imgbox{
+  height: 250px;
+  width: 350px;
+  background-image: url(../public/register\ image.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.registerinput{
+  height: 400px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.regbottom form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.regbottom input{
+  padding: 10px 15px;
+  border-radius: 50px;
+  background-color: #b5deff;
+  border: none;
+}
+
+.regbutton{
+  margin: auto;
+  font-size: 20px;
+  padding: 5px 18px;
+  border-radius: 10px;
+  border: none;
+  background-color: #5376cf;
+  margin-top: 5px;
+}
+
+.regbutton:active{
+  scale: 0.95;
+}
