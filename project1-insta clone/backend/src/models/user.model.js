@@ -4,12 +4,14 @@ const userSchema = new mongoose.Schema({
     userName:{
         type:String,
         unique:[true,"this username is already take by the other user"],
-        required:["plz enter your username"]
+        required:["plz enter your username"],
+        trim: true,
     },
     email:{
         type:String,
         unique:[true,"this email is already take by the other user"],
-        required:["plz enter your email"]
+        required:["plz enter your email"],
+        trim: true,
     },
     password:{
         type:String,

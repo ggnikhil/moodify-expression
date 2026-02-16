@@ -9,5 +9,6 @@ const upload = multer({
 
 postRouter.post("/",upload.single("image0"),postController.createPostController)
 postRouter.get("/get",postController.fetchingPostController)
+postRouter.get("/details/:postId",postController.postDetailsController)
 
 module.exports = postRouter
