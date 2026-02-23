@@ -174,6 +174,279 @@ html, body, #root {
 .main .regpage .regBottom .regPtag a {
   text-decoration: none;
 }
+.main .homepage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.main .homepage .storybar {
+  height: 120px;
+  width: 100%;
+  flex-shrink: 0;
+  background-color: black;
+  padding: 10px 5px;
+  display: flex;
+  gap: 5px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.main .homepage .storybar::-webkit-scrollbar {
+  display: none;
+}
+.main .homepage .storybar .addstory {
+  height: 100%;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+  position: relative;
+  flex-shrink: 0;
+}
+.main .homepage .storybar .addstory .yourstory {
+  height: 75px;
+  width: 75px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 2px;
+  overflow: hidden;
+}
+.main .homepage .storybar .addstory .yourstory img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .homepage .storybar .addstory .yourname {
+  font-size: 12px;
+  color: white;
+}
+.main .homepage .storybar .addstory .plusicon {
+  position: absolute;
+  background-color: white;
+  height: 22px;
+  width: 22px;
+  top: 50%;
+  right: 7%;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .homepage .storybar .addstory .plusicon i {
+  font-size: 13px;
+  font-weight: bold;
+}
+.main .homepage .storybar .storylist {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 7px;
+}
+.main .homepage .storybar .storylist .followerstory {
+  height: 100%;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .homepage .storybar .storylist .followerstory .gradientring {
+  height: 81px;
+  width: 81px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.main .homepage .storybar .storylist .followerstory .gradientring .blackbg {
+  height: 76px;
+  width: 76px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.main .homepage .storybar .storylist .followerstory .gradientring .blackbg .storyimg {
+  height: 68px;
+  width: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main .homepage .storybar .storylist .followerstory .gradientring .blackbg .storyimg img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .homepage .storybar .storylist .followerstory .userlist {
+  font-size: 10px;
+  color: white;
+  white-space: nowrap;
+}
+.main .homepage .postfeed {
+  flex: 1;
+  overflow-y: scroll;
+  background-color: black;
+}
+.main .homepage .postfeed .postcard {
+  height: 550px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.main .homepage .postfeed .postcard .postheader {
+  height: 45px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+.main .homepage .postfeed .postcard .postheader .twoelement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.main .homepage .postfeed .postcard .postheader .twoelement .userprofilepost {
+  height: 40px;
+  width: 40px;
+  background-color: red;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main .homepage .postfeed .postcard .postheader .twoelement .userprofilepost img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .homepage .postfeed .postcard .postheader .userLoacyionId .nameuser {
+  font-size: 16px;
+}
+.main .homepage .postfeed .postcard .postheader .userLoacyionId .location {
+  font-size: 12px;
+}
+.main .homepage .postfeed .postcard .postheader .menu {
+  color: white;
+  font-size: 18px;
+}
+.main .homepage .postfeed .postcard .postimage {
+  height: 400px;
+  width: 100%;
+  background-color: black;
+}
+.main .homepage .postfeed .postcard .postimage img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .homepage .postfeed .postcard .postimage video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .homepage .postfeed .postcard .postcount {
+  height: 45px;
+  width: 100%;
+}
+.main .homepage .postfeed .postcard .postcount .postaction {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+.main .homepage .postfeed .postcard .postcount .postaction .likecommentshareSection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: white;
+  font-size: 25px;
+}
+.main .homepage .postfeed .postcard .postcount .postaction .likecommentshareSection .actiondiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.main .homepage .postfeed .postcard .postcount .postaction .likecommentshareSection .actiondiv i {
+  font-size: 25px;
+}
+.main .homepage .postfeed .postcard .postcount .postaction .likecommentshareSection .actiondiv .actioncoount {
+  font-size: 16px;
+}
+.main .homepage .postfeed .postcard .postcount .postaction .likecommentshareSection .actiondiv #rotate {
+  rotate: -20deg;
+  font-size: 23px;
+  font-weight: 100;
+}
+.main .homepage .postfeed .postcard .postcount .postaction .save {
+  height: 100%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+}
+.main .homepage .postfeed .postcard .postcaption {
+  width: 100%;
+  color: white;
+}
+.main .homepage .postfeed .postcard .postcaption .captionpara {
+  padding: 2px 7px;
+  font-size: 14px;
+  line-height: 1.1;
+}
+.main .homepage .postfeed .postcard .postdaye {
+  color: gray;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.main .homepage .navbar {
+  height: 50px;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  color: white;
+  font-size: 27px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 0px 10px;
+  font-weight: 100;
+}
+.main .homepage .navbar #navuserprofile {
+  height: 35px;
+  width: 35px;
+  background-color: red;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main .homepage .navbar #navuserprofile img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 @media (min-width: 400px) {
   .main .startpage {

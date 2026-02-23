@@ -8,10 +8,9 @@ async function uploadFiles(buffer){
 
     const response = await cloudImg.files.upload({
         file:buffer.toString("base64"),
-        fileName:"image.jpg",
+        fileName:"file",
         folder:"/Insta-Clone"
     })
-
     return response
 
 }

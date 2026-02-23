@@ -1,9 +1,14 @@
 import React from 'react'
+import StoryBar from "../components/Stories/StoryBar"
+import PostFeed from "../components/Posts/PostFeed"
+import Navbar from "../components/Navigation/Navbar"
 
 const Home = () => {
   return (
-    <div>
-      <h1>home</h1>
+    <div className='homepage'>
+      <StoryBar />
+      <PostFeed />
+      <Navbar />
     </div>
   )
 }
