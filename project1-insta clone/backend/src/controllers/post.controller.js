@@ -1,6 +1,6 @@
 const postModel = require("../models/post.model")
-const userModel = require("../models/user.model")
 const uploadFiles = require("../services/storage.service")
+const likeModel = require("../models/like.model")
 const jwt = require("jsonwebtoken")
 
 
@@ -20,7 +20,6 @@ async function createPostController(req,res){
         discription,
         userId:req.user.id
     })
-
 
     res.status(201).json({
         message:"post created successfully",
@@ -45,7 +44,6 @@ async function fetchingPostController(req,res){
 
 
 async function postDetailsController(req,res){
-
 
     const postId = req.params.postId
     const post = await postModel.findById(postId)
@@ -73,9 +71,27 @@ async function postDetailsController(req,res){
     })
 }
 
+async function likePostRecord(req,res){
+    const username = req.user.username
+    const postId = req.params.postId
+
+    console.log(username,postId) 
+
+    const likeRecord = await likeModel.create({
+        post:postId,
+        user:username
+    })
+
+    res.status(201).json({
+        message:"post likes successfully",
+        likeRecord
+    })
+}
+
 
 module.exports ={
     createPostController,
     fetchingPostController,
-    postDetailsController
+    postDetailsController,
+    likePostRecord
 }

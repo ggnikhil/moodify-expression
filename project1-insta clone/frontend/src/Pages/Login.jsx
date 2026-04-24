@@ -17,13 +17,14 @@ const Login = () => {
       const response = await axios.post("http://localhost:3000/api/auth/login",{
         email: email,
         password: userpassword
+      },{
+        withCredentials:true
       })
 
       setemail("")
       setuserpassword("")
 
       navigate("/home")
-
 
     }catch(err){
       alert(err.response?.data?.message || "Login failed!")

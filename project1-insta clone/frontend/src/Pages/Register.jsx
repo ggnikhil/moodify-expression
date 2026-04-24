@@ -24,8 +24,7 @@ const Register = () => {
         email: email,
         bio: bio,
         password: userpassword,
-        profile: ""
-      })
+      },)
 
     setusername("")
     setemail("")
