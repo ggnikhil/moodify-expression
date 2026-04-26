@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { detect,init } from "../utils/utils";
+import "../style/FaceExpression.scss"
 
 
 export default function FaceExpression() {
@@ -26,14 +27,14 @@ export default function FaceExpression() {
     }, []);
 
     return (
-        <div  style={{ textAlign: "center" }}>
+        <div className="outerbox">
             <video className="mainbox"
                 ref={videoRef}
                 style={{ width: "600px", borderRadius: "12px" }}
                 playsInline
             />
             <h2 className="title">{expression}</h2>
-            <button className="btn" onClick={()=>{detect({landmarkerRef,videoRef,setExpression})}} >Detect expression</button>
+            <button className="btn-red" onClick={()=>{detect({landmarkerRef,videoRef,setExpression})}} >Detect expression</button>
         </div>
     );
 }

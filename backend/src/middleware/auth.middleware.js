@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken")
 const userModel = require("../models/user.model")
 const blacklistModel = require("../models/blacklist.model")
+const redis = require("../config/cache")
 
 
 async function verifyUserMiddleware(req,res,next){
@@ -12,7 +13,7 @@ async function verifyUserMiddleware(req,res,next){
         })
     }
 
-    const checkBlacklistedToken = await blacklistModel.findOne({token})
+    const checkBlacklistedToken = await redis.get(token)
 
     if(checkBlacklistedToken){
         return res.status(401).json({
