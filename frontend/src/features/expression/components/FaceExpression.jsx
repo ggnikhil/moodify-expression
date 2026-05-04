@@ -30,7 +30,7 @@ export default function FaceExpression() {
         <div className="outerbox">
             <video className="mainbox"
                 ref={videoRef}
-                style={{ width: "600px", borderRadius: "12px" }}
+                style={{ width: "550px", borderRadius: "12px" }}
                 playsInline
             />
             <h2 className="title">{expression}</h2>

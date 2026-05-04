@@ -42,4 +42,5 @@ export const useAuth = ()=>{
     return{
         user,loading,handleRegister,handleLogin,handleGetMe,handleLogout
     }
+    
 }

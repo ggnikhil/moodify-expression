@@ -1,7 +1,7 @@
 import {createBrowserRouter} from "react-router"
 import Login from "./features/auth/pages/Login"
 import Register from "./features/auth/pages/Register"
-import Home from "./features/auth/pages/Home"
+import Home from "./features/home/pages/Home"
 import FaceExpression from "./features/expression/components/FaceExpression"
 
 
@@ -15,7 +15,7 @@ export const AppRouter = createBrowserRouter([
         element:<Register />
     },
     {
-        path:"/home",
-        element: <FaceExpression />
+        path:"/",
+        element: <Home />
     }
 ])

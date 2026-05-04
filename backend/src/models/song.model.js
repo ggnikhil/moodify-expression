@@ -1,11 +1,11 @@
 const mongoose = require("mongoose")
 
 const songSchema = new mongoose.Schema({
-    url:{
+    songUrl:{
         type:String,
         required:true
     },
-    poster:{
+    posterUrl:{
         type:String,
         required:true
     },
