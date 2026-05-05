@@ -1,14 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { detect,init } from "../utils/utils";
 import "../style/FaceExpression.scss"
+import { useSong } from "../../home/hooks/useSong.js"
+
 
 
 export default function FaceExpression() {
+
+    const {loading,handleGetSongByMood,Song} = useSong()
     const videoRef = useRef(null);
     const landmarkerRef = useRef(null);
     const streamRef = useRef(null);
 
     const [ expression, setExpression ] = useState("Detecting...");
+
+    useEffect(() => {
+        if(expression !== "Detecting..."){
+            handleGetSongByMood({ mood: expression })
+        }
+    }, [expression]);
 
     useEffect(() => {
         init({landmarkerRef,videoRef,streamRef});
