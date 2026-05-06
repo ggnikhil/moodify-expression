@@ -22,7 +22,7 @@ async function uploadSong(req,res){
 
     const song = await songModel.create({
         songUrl:songFile.url,
-        posterUrl:posterFile.url,
+        posterUrl: posterFile ? posterFile.url : null,
         title: tags.title,
         mood
     })

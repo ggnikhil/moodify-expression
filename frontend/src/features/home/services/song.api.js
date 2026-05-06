@@ -13,3 +13,17 @@ export async function getSongByMood({mood}){
 
     console.log(response.data)  
 }
+
+export async function uploadSong(Files, mood) {
+
+    const formData = new FormData()
+
+    formData.append("song", Files)
+    formData.append("mood", mood)
+
+    const response = await api.post("/api/song/upload",formData)
+
+    return response.data
+
+    console.log(response.data)
+}

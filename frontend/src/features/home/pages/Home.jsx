@@ -1,4 +1,5 @@
 import React, { useRef,useState } from 'react'
+import { Link } from 'react-router'
 import "../style/home.scss"
 import FaceExpression from '../../expression/components/FaceExpression'
 import { useSong } from '../hooks/useSong'
@@ -44,7 +45,7 @@ const Home = () => {
       <div className='home'>
         <nav>
           <img src="moododo-removebg-preview.png" alt="logo" />
-          <button className='sidebarbutton'><i class="ri-layout-right-line"></i></button>
+          <Link to={"/uplaodsong"} className='uplaodbtn'>Upload Song</Link>
         </nav>
 
         <section>

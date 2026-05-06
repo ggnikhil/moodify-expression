@@ -22,19 +22,19 @@
                 height: 40px;
             }
 
-            .sidebarbutton{
-                padding: 0px 5px;
-                border-radius: 5px; 
+            .uplaodbtn{
+                padding: 5px 12px;
+                font-size: 18px;
+                border-radius: 10px;
                 border: none;
                 outline: none;
-                background-color: #FFEBD2;
+                background-color: #FF0000;
+                cursor: pointer;
+                text-decoration: none;
+                color: black;
 
                 &:active{
-                    scale: 0.93;
-                }
-
-                i {
-                    font-size: 25px;
+                    scale: 0.95;
                 }
             }
         }

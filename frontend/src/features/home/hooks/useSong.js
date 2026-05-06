@@ -1,6 +1,6 @@
 import { SongContext } from "../song.context";
 import { useContext,useEffect } from "react";
-import { getSongByMood } from "../services/song.api";
+import { getSongByMood,uploadSong } from "../services/song.api";
 
 export const useSong = ()=>{
     const songDataContext = useContext(SongContext)
@@ -14,7 +14,13 @@ export const useSong = ()=>{
         setloading(false)
     }
 
+    async function handleUplaodSong(Files,Mood) {
+        setloading(true)
+        const response = await uploadSong(Files,Mood)
+        setloading(false)
+    }
+
     return{
-        loading,setloading,Song,setSong,handleGetSongByMood
+        loading,setloading,Song,setSong,handleGetSongByMood,handleUplaodSong
     }
 }
